@@ -1,14 +1,14 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-const ShowMovieList = (props) => {
+const ShowMovieList = ({movies}) => {
     return (
         <>
         {
-            props.movies?.length > 0 // Note the '?' in movies?.length > 0
+            movies?.length > 0 // Note the '?' in movies?.length > 0
               ? (
                 <div className='container'>
-                  {props.movies.map((movie) => (
+                  {movies.map((movie) => (
                     <MovieCard movie={movie} />
                   ))}
                 </div>
